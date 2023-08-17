@@ -125,6 +125,10 @@
   }
 
   /*MOBILE VERSION*/
+  .inactive_plash {
+    transform: translate(-20rem);
+    transition: transform 300ms;
+  }
   .mobile-menu {
     padding: 24px;
     position: absolute;
