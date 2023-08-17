@@ -4,9 +4,9 @@
     --very-light-pink: #C7C7C7;
     --text-input-field: #F7F7F7;
     --hospital-green: #ACD9B2;
-    --sm: 14px;
-    --md: 16px;
-    --lg: 18px;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
   }
   .html{
     font-size: 62.5%;
@@ -23,14 +23,14 @@
   nav {
     display: flex;
     justify-content: space-between;
-    padding: 0 24px;
-    border-bottom: 1px solid var(--very-light-pink);
+    padding: 0 2.4rem;
+    border-bottom: 0.1rem solid var(--very-light-pink);
   }
   .menu {
     display: none;
   }
   .logo {
-    width: 100px;
+    width: 10rem;
   }
   .navbar-left ul,
   .navbar-right ul {
@@ -39,46 +39,46 @@
     margin: 0;
     display: flex;
     align-items: center;
-    height: 60px;
+    height: 6rem;
   }
   .navbar-left {
     display: flex;
   }
   .navbar-left ul {
-    margin-left: 12px;
+    margin-left: 1.2rem;
   }
   .navbar-left ul li a,
   .navbar-right ul li a {
     text-decoration: none;
     color: var(--very-light-pink);
-    border: 1px solid var(--white);
-    padding: 8px;
-    border-radius: 8px;
+    border: 0.1rem solid var(--white);
+    padding: 0.8rem;
+    border-radius: 0.8rem;
   }
   .navbar-left ul li a:hover,
   .navbar-right ul li a:hover {
-    border: 1px solid var(--hospital-green);
+    border: 0.1rem solid var(--hospital-green);
     color: var(--hospital-green);
   }
   .navbar-email {
     color: var(--very-light-pink);
     cursor: pointer;
     font-size: var(--sm);
-    margin-right: 12px;
+    margin-right: 1.2rem;
   }
   .navbar-shopping-cart {
     position: relative;
   }
   .navbar-shopping-cart div {
-    width: 16px;
-    height: 16px;
+    width: 1.6rem;
+    height: 1.6rem;
     background-color: var(--hospital-green);
     border-radius: 50%;
     font-size: var(--sm);
     font-weight: bold;
     position: absolute;
-    top: -6px;
-    right: -3px;
+    top: -0.6rem;
+    right: -0.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,11 +87,11 @@
     position: absolute;
     top: 3.75rem;
     right: 6rem;
-    width: 100px;
+    width: 7rem;
     height: auto;
-    border: 1px solid var(--very-light-pink);
-    border-radius: 6px;
-    padding: 20px 20px 0 20px;
+    border: 0.1rem solid var(--very-light-pink);
+    border-radius: 0.6rem;
+    padding: 2.0rem 2.0rem 0 2.0rem;
   }
   .desktop-menu ul {
     list-style: none;
@@ -106,8 +106,8 @@
     font-weight: bold;
   }
   .desktop-menu ul li:last-child {
-    padding-top: 20px;
-    border-top: 1px solid var(--very-light-pink);
+    padding-top: 2.0rem;
+    border-top: 0.1px solid var(--very-light-pink);
   }
   .desktop-menu ul li:last-child a {
     color: var(--hospital-green);
@@ -116,7 +116,7 @@
   .desktop-menu ul li a {
     color: var(--back);
     text-decoration: none;
-    margin-bottom: 20px;
+    margin-bottom: 2.0rem;
     display: inline-block;
   }
   @media (max-width: 640px) {
