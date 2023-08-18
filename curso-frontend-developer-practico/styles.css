@@ -239,6 +239,9 @@
   }
 
   /*PRODUCTS DETAILS*/
+  #product-detail{
+    position: fixed;
+  }
   .product-detail-close {
     background: var(--white);
     cursor: cell;
@@ -248,6 +251,7 @@
     top: 2.4rem;
     left: 2.4rem;
     z-index: 2;
+    padding: 0.1rem;
     border-radius: 50%;
   }
   .product-detail-close:hover {
