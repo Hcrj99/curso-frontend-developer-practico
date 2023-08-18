@@ -32,11 +32,15 @@ function toggleCarrito_menu(){
     Product_detail_container.classList.add('inactive');
 }
 
-function open_product_detail(){
+function open_product_detail(event){
     Product_detail_container.classList.remove('inactive');
     Carrito_menu.classList.add("inactive");
     Desktop_menu.classList.add("inactive");
     Mobile_menu.classList.add("inactive");
+    const Image_change = document.querySelector('#info-images');
+    Image_change.setAttribute("src", event.target.src);
+    const Image_price = document.querySelector('#product-price');
+    Image_price.innerText = event.target.nextElementSibling.innerText;
 }
 
 function close_detail_product(){
