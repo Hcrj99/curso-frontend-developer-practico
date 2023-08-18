@@ -2,7 +2,7 @@ const Menu_email = document.querySelector('.navbar-email');
 const Desktop_menu = document.querySelector('.desktop-menu');
 const Hamburguer_menu = document.querySelector('.menu');
 const Mobile_menu = document.querySelector('.mobile-menu');
-const Carrito_menu = document.querySelector('.product-detail');
+const Carrito_menu = document.querySelector('#Shopping-cart-container');
 const Carrito_icon_menu = document.querySelector('.navbar-shopping-cart');
 const Cards_container = document.querySelector('.cards-container');
 
@@ -83,32 +83,33 @@ Product_list.push({
 
 function Render_products(Package_products){
     for(product of Package_products){
+        
         const Product_card = document.createElement('section');
         Product_card.classList.add('product-card');
 
-            const Product_img = document.createElement('img');
-            Product_img.setAttribute('src', product.image);
+        const Product_img = document.createElement('img');
+        Product_img.setAttribute('src', product.image);
 
-            const Product_info = document.createElement('div');
-            Product_info.classList.add('product-info');
+        const Product_info = document.createElement('div');
+        Product_info.classList.add('product-info');
 
-                const Product_inDIV = document.createElement('div');
+        const Product_inDIV = document.createElement('div');
 
-                    const Product_price = document.createElement('p');
-                    Product_price.innerText = '$' + product.price;
-                    const Product_name = document.createElement('p');
-                    Product_name.innerText = product.name;
+        const Product_price = document.createElement('p');
+        Product_price.innerText = '$' + product.price;
+        const Product_name = document.createElement('p');
+        Product_name.innerText = product.name;
 
-                Product_inDIV.append(Product_price, Product_name);
+        Product_inDIV.append(Product_price, Product_name);
 
-                const Product_figure = document.createElement('figure');
+        const Product_figure = document.createElement('figure');
 
-                    const Product_img_car = document.createElement('img');
-                    Product_img_car.setAttribute('src', './icons/bt_add_to_cart.svg');
+        const Product_img_car = document.createElement('img');
+        Product_img_car.setAttribute('src', './icons/bt_add_to_cart.svg');
 
-                Product_figure.append(Product_img_car);
+        Product_figure.append(Product_img_car);
 
-            Product_info.append(Product_inDIV, Product_figure);
+        Product_info.append(Product_inDIV, Product_figure);
 
         Product_card.append(Product_img, Product_info);
 
