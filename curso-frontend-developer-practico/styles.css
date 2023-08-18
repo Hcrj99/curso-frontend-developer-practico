@@ -34,8 +34,7 @@
   .logo {
     width: 10rem;
   }
-  .navbar-left ul,
-  .navbar-right ul {
+  .navbar-left ul, .navbar-right ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -49,16 +48,14 @@
   .navbar-left ul {
     margin-left: 1.2rem;
   }
-  .navbar-left ul li a,
-  .navbar-right ul li a {
+  .navbar-left ul li a, .navbar-right ul li a {
     text-decoration: none;
     color: var(--very-light-pink);
     border: 0.1rem solid var(--white);
     padding: 0.8rem;
     border-radius: 0.8rem;
   }
-  .navbar-left ul li a:hover,
-  .navbar-right ul li a:hover {
+  .navbar-left ul li a:hover, .navbar-right ul li a:hover {
     border: 0.1rem solid var(--hospital-green);
     color: var(--hospital-green);
   }
@@ -90,6 +87,7 @@
    /*DESKTOP MENU*/
   .desktop-menu {
     position: absolute;
+    background-color: var(--white);
     top: 6rem;
     right: 6rem;
     width: 7rem;
@@ -235,6 +233,49 @@
     font-weight: bold;
     height: 5rem;
   }
+
+  /*ELEMTS TO SELL*/
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 14rem);/*ANCHO DEL CONTENEDOR Y SE REPITE PARA TODOS EN UNA MIAM LINEA*/
+    gap: 2.5rem;/*ESPACION ENTRE COLUMNAS*/
+    place-content: center;
+  }
+  .product-card {
+    width: 14rem;
+  }
+  .product-card img {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 2rem;
+    object-fit: cover;
+  }
+  .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.2rem;
+  }
+  .product-info figure {
+    margin: 0;
+  }
+  .product-info figure img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .product-info div p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+  }
+  .product-info div p:nth-child(2) {
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--very-light-pink);
+  }
+
   @media (max-width: 640px) {
     .menu {
         display: block;
@@ -250,6 +291,25 @@
     }
     .product-detail {
         width: 100%;
+    }
+    .cards-container {
+      grid-template-columns: repeat(auto-fill, 7rem);
+    }
+    .product-card {
+      width: 7rem;
+    }
+    .product-card img {
+      width: 7rem;
+      height: 7rem;
+    }.cards-container {
+      grid-template-columns: repeat(auto-fill, 7rem);
+    }
+    .product-card {
+      width: 7rem
+    }
+    .product-card img {
+      width: 7rem;
+      height: 7rem;
     }
   }
   @media (min-width: 641px){
