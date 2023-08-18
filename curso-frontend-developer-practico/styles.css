@@ -241,7 +241,7 @@
   }
 
   /*PRODUCTS DETAILS*/
-  #product-detail-close {
+  .product-detail-close {
     background: var(--white);
     cursor: cell;
     width: 1.4rem;
@@ -250,10 +250,9 @@
     top: 2.4rem;
     left: 2.4rem;
     z-index: 2;
-    padding: 1.2rem;
     border-radius: 50%;
   }
-  #product-detail-close:hover {
+  .product-detail-close:hover {
     cursor: cell;
   }
   #product-detail > img:nth-child(2) {
@@ -263,7 +262,7 @@
     border-radius: 2rem 2rem 2rem 2rem;
   }
   #product-detail .product-info {
-    margin: 2.4rem 2.4rem 0 2.4rem;
+    margin: 0 0 0 2.4rem;
   }
   #product-detail .product-info p:nth-child(1) {
     font-weight: bold;
