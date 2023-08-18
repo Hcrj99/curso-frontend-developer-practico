@@ -5,51 +5,45 @@ const Mobile_menu = document.querySelector('.mobile-menu');
 const Carrito_menu = document.querySelector('#Shopping-cart-container');
 const Carrito_icon_menu = document.querySelector('.navbar-shopping-cart');
 const Cards_container = document.querySelector('.cards-container');
-
+const Product_detail_container = document.querySelector('#product-detail');
+const Button_detail = document.querySelector('.product-detail-close');
 
 Menu_email.addEventListener('click', toggleDesktop_menu);
 Hamburguer_menu.addEventListener('click', togglMobile_menu);
 Carrito_icon_menu.addEventListener('click', toggleCarrito_menu);
+Button_detail.addEventListener('click', close_detail_product);
 
 function toggleDesktop_menu(){
-    const Mobile_carrito_closed = Carrito_menu.classList.contains('inactive');
-
-    if(!Mobile_carrito_closed){
-        Carrito_menu.classList.add("inactive");
-    }
-
     Desktop_menu.classList.toggle('inactive');
+    Carrito_menu.classList.add("inactive");
+    Product_detail_container.classList.add('inactive');
 }
 
 function togglMobile_menu(){
-
-    const Mobile_carrito_closed = Carrito_menu.classList.contains('inactive');
-
-    if(!Mobile_carrito_closed){
-        Carrito_menu.classList.add("inactive");
-    }
-
     Mobile_menu.classList.toggle("inactive");
+    Carrito_menu.classList.add("inactive");
+    Product_detail_container.classList.add('inactive');
 }
 
 function toggleCarrito_menu(){
-
-    const Mobile_menu_closed = Mobile_menu.classList.contains('inactive');
-    const Desktop_menu_open = Desktop_menu.classList.contains('inactice');
-
-    if(!Mobile_menu_closed){
-        Mobile_menu.classList.add("inactive");
-    }
-
-    if(!Desktop_menu_open){
-        Desktop_menu.classList.add("inactive");
-    }
-
     Carrito_menu.classList.toggle('inactive');
+    Mobile_menu.classList.add("inactive");
+    Desktop_menu.classList.add("inactive");
+    Product_detail_container.classList.add('inactive');
+}
+
+function open_product_detail(){
+    Product_detail_container.classList.remove('inactive');
+    Carrito_menu.classList.add("inactive");
+    Desktop_menu.classList.add("inactive");
+    Mobile_menu.classList.add("inactive");
+}
+
+function close_detail_product(){
+    Product_detail_container.classList.add('inactive');
 }
 
 const Product_list = [];
-
 Product_list.push({
     name: 'Bike',
     price: 120,
@@ -68,19 +62,6 @@ Product_list.push({
     image: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=600',
 });
 
-/*<div class="product-card">
-        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-        <div class="product-info">
-            <div>
-                <p>$120,00</p>
-                <p>Bike</p>
-            </div>
-            <figure>
-                <img src="./icons/bt_add_to_cart.svg" alt="">
-            </figure>
-        </div>
-</div> */
-
 function Render_products(Package_products){
     for(product of Package_products){
         
@@ -89,6 +70,7 @@ function Render_products(Package_products){
 
         const Product_img = document.createElement('img');
         Product_img.setAttribute('src', product.image);
+        Product_img.addEventListener('click', open_product_detail);
 
         const Product_info = document.createElement('div');
         Product_info.classList.add('product-info');
